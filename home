@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="owner" content="Mr H Dumpty">
+  <meta name="keywords" content="mrhdumpty.xyz, bingus, binguscooffical, bingusco, bingusofficial, mrhdumpty, mr h dumpty, software, OS, computers, computer,">
+  <meta name="description" content="The official website of BingusCO!">
+  <meta http-equiv="content-language" content="en" />
+  <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+  <title>BingusCO Official Website!</title>
+  <link href="style.css" rel="stylesheet" type="text/css"/>
+  <link rel="preload" as="font" href="/fonts/LoudBeats.ttf" type="font/ttf" crossorigin="anonymous">
+</head>
+<body>
+  <div class=sidebar></div>
+  <div class=topbar>
+    <a href="/home-embed"> 
+      <span>
+        <img id="image" src="favicon.png"></img>
+        BingusCO
+      </span>
+    </a>
+    <iframe class="embed" src="https://mrhdumpty.xyz/home-embed"></iframe>
+  </div>
+  <div id="overlay">
+    <div id="progstat"></div>
+    <div id="progress"></div>
+  </div>
+  <div id="container">
+    <img src="http://placehold.it/3000x3000/cf5">
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
