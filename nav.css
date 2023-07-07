@@ -1,42 +1,44 @@
 html, body {
   height: 100%;
   width: 100%;
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
   position: sticky;
   overflow: hidden;
-  cursor:url("cursor.png"), auto;
-	perspective: 500px;
+  cursor: url("cursor.png"), auto;
+  perspective: 500px;
 }  
 
 @font-face {
   font-family: 'loudbeats';
   src: url("LoudBeats.ttf") format('truetype');
+  font-display: swap;
 }
 
-.sidebar{
+.sidebar {
   position: relative;
   height: 100vh;
   width: 10vw;
-  background-image:url("square.png");
+  background-image: url("square.png");
 }
 
 .signup {
-  font-size:20pt;
+  font-size: 20pt;
   cursor: url("cursor_for_links.png");
 }
 
-.topbar{
+.topbar {
   position: absolute;
   height: 25vh;
   width: 100vw;
-  background-image:url("square.png");
-  background-color: rgba(60, 69, 62,.5);
+  background-image: url("square.png");
+  background-color: rgba(60, 69, 62, .5);
   background-blend-mode: multiply;
   top: 0px;
 }
+
 @media (pointer:none), (pointer:coarse) {
-  .topbar{
+  .topbar {
     height: 25vh;
   }
 
@@ -48,20 +50,20 @@ html, body {
     height: auto;
   }
   
-  .sidebar{
+  .sidebar {
     display: none;
     width: 30vw;
   }
 }
 
-#bingusco{
+#bingusco {
   display: flex;
   align-items: center;
-  top:25%;
+  top: 25%;
   left: 17.5%;
   position: relative;
   z-index: 875974;
-  font-family: loudbeats;
+  font-family: "loudbeats", "Comic Sans MS";
   font-size: 100px;
   margin: 0 auto;
 }
@@ -71,13 +73,14 @@ html, body {
   vertical-align: top;
 }
 
-span a{
-  color:black;
+span a {
+  color: black;
   text-decoration: none;
   cursor: url("cursor_for_links.png"), auto;
   margin: 10 auto;
 }
-#image{
+
+#image {
   background: url("favicon.png") no-repeat;
   top: 0;  
   left: -100px;
@@ -86,7 +89,7 @@ span a{
   position: absolute;
 }
 
-#embed-1{
+#embed-1 {
   cursor: url("cursor_for_links.png"), auto;
   right: 25%;
   top: 50%;
@@ -100,7 +103,7 @@ span a{
   margin: 0 auto;
 }
 
-#embed-2{
+#embed-2 {
   cursor: url("cursor_for_links.png"), auto;
   right: 5%;
   top: 50%;
@@ -120,7 +123,7 @@ span a{
   position: absolute;
   left: 0;
   top: 50vh;
-  font-family: loudbeats;
+  font-family: "loudbeats", "Comic Sans MS";
 }
 
 #page-footer {

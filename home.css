@@ -1,9 +1,11 @@
-html, body{
+html, body {
   height: 100vh;
 }
+
 @font-face {
   font-family: loudbeats;
-  src: url("LoudBeats.ttf");
+  src: url("LoudBeats.ttf") format('truetype');
+  font-display: swap;
 }
 
 @keyframes fade {
@@ -14,26 +16,26 @@ html, body{
   100% { color: #000000; }
 }
 
-#welcome{
+#welcome {
   position: relative;
   width: auto;
-  overflow: hidden; 
-  font-family: loudbeats;
+  overflow: hidden;
+  font-family: loudbeats, "Comic Sans MS", cursive;
   font-size: 30pt;
   z-index: 999999999;
   transform: translate(40vw, 25vh);
-  cursor: url("cursor.png"); 
-  animation: fade 2.5s linear 0s infinite; 
+  cursor: url("cursor.png");
+  animation: fade 2.5s linear 0s infinite;
 }
 
 #welcome_text {
   font-family: "Lucida Console", "Courier New", monospace;
-  position:absolute; 
+  position: absolute;
   text-align: center;
   width: 85vw;
   height: 70vh;
-  overflow-y:scroll;
-  overflow-x:hidden;
+  overflow-y: scroll;
+  overflow-x: hidden;
   font-size: 2vw;
   cursor: url("cursor.png");
   top: 30vh;
