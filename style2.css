@@ -1,132 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:700&display=swap');
+
 :root {
-    --bc: #0e0d0f;
-    --primary: rgb(161, 166, 252);
-    --white: #ffffff;
-    --black: #000000;
-    /* Colors */
-    --red: #da2c4d;
-    --orange: #fd7e14;
-    --yellow: #f8ab37;
-    --yellow-bright: #ffc107;
-    --light-green: #24e33a;
-    --green: #28a745;
-    --teal: #20c997;
-    --cyan: #17a2b8;
-    --blue: #007bff;
-    --indigo: #6610f2;
-    --purple: #6f42c1;
-    --pink: #e83e8c;
-    /* Gray Colors */
-    --bc-gray: #ede8e4;
-    --gray: #9e9d9b;
-    --gray-dark: #1c1a19;
-    /* Gradients */
-    --rainbow: linear-gradient(90deg, rgba(245,96,117,1) 0%, rgba(252,210,29,1) 14%, rgba(246,237,105,1) 28%, rgba(127,246,105,1) 43%, rgba(105,246,176,1) 55%, rgba(105,231,246,1) 69%, rgba(105,150,246,1) 85%, rgba(150,105,246,1) 100%);
-    /* Sizes */
-    --button: 1.22rem;
-    /* Fonts */
-    --font-main: "Poppins";
+  --bg: #42454a;
+  --text: #382b22;
+  --light-pink: #fff0f0;
+  --pink: #ffe9e9;
+  --dark-pink: #f9c4d2;
+  --pink-border: #b18597;
+  --pink-shadow: #ffe3e2;
 }
+
 * {
-    box-sizing: border-box;
-    user-select: none;
-    cursor: none;
+  cursor: url("cursor_for_links.png"), auto;
+  box-sizing: border-box;
 }
-html, body {
-    margin: 0;
-    width: 100%;
-    font-family: var(--font-main);
-    background-color: transparent;
-    -webkit-font-smoothing: antialiased;
-    scroll-behavior: smooth;
-    cursor:url()
+
+*::before,
+*::after {
+  box-sizing: border-box;
 }
-main {
-    height: 100vh;
+
+body {
+  cursor:url(cursor.png), auto;
+  font-family: 'Rubik', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
 }
-.flexbox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+button {
+  cursor: url("cursor_for_links.png");
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border: 0;
+  text-decoration: none;
+  font-size: inherit;
+  font-family: inherit;
 }
-.button-wrapper {
-    margin: 1em 0;
+
+button.learn-more {
+  cursor: url("cursor_for_links.png");
+  font-weight: 600;
+  color: var(--text);
+  text-transform: uppercase;
+  padding: 1.25em 2em;
+  background: var(--light-pink);
+  border: 2px solid var(--pink-border);
+  border-radius: 0.75em;
+  transform-style: preserve-3d;
+  transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1);
 }
-.button-svg {
-    fill: var(--white);
-    height: calc(var(--button) - .1rem);
+
+button.learn-more::before {
+  cursor: url("cursor_for_links.png");
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--dark-pink);
+  border-radius: inherit;
+  box-shadow: 0 0 0 2px var(--pink-border), 0 0.625em 0 0 var(--pink-shadow);
+  transform: translate3d(0, 0.75em, -1em);
+  transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
 }
-.button, .btn-secondary {
-    margin: 0;
-    width: 100%;
-    position: relative;
-    padding: 1.2em 1.8em;
-    letter-spacing: .1em;
-    text-align: center;
-    color: var(--bc);
-    font-size: var(--button);
-    background: var(--rainbow);
-    background-size: 500%;
-    border-radius: 5em;
-    border: none;
-    transform: scaleX(1);
-    transition: transform .3s cubic-bezier(.175,.885,.32,1.275), filter .3s cubic-bezier(.175,.885,.32,1.275), bottom .3s cubic-bezier(.175,.885,.32,1.275), background-position 3s cubic-bezier(.455,.03,.515,.955), -webkit-transform .3s cubic-bezier(.175,.885,.32,1.275), -webkit-filter .3s cubic-bezier(.175,.885,.32,1.275);
+
+button.learn-more:hover {
+  cursor: url("cursor_for_links.png");
+  background: var(--pink);
+  transform: translate(0, 0.25em);
 }
-.button {
-    transition: transform .3s cubic-bezier(.175,.885,.32,1.275), bottom .3s cubic-bezier(.175,.885,.32,1.275), background-position 3s cubic-bezier(.455,.03,.515,.955), -webkit-transform .3s cubic-bezier(.175,.885,.32,1.275);
+
+button.learn-more:hover::before {
+  cursor: url("cursor_for_links.png");
+  box-shadow: 0 0 0 2px var(--pink-border), 0 0.5em 0 0 var(--pink-shadow);
+  transform: translate3d(0, 0.5em, -1em);
 }
-.button, .button .btn-secondary {
-    background-position: 0 50%;
-    bottom: 0;
+
+button.learn-more:active {
+  cursor: url("cursor_for_links.png");
+  background: var(--pink);
+  transform: translate(0em, 0.75em);
 }
-.button .btn-secondary {
-    left: 0;
-    width: 100%;
-    position: absolute;
-    filter: blur(1rem);
-    opacity: .65;
-    z-index: -1;
-    transform: scale3d(.85, .85, 1);
-    transition: transform .3s cubic-bezier(.175,.885,.32,1.275), filter .3s cubic-bezier(.175,.885,.32,1.275), bottom .3s cubic-bezier(.175,.885,.32,1.275), background-position 3s cubic-bezier(.455,.03,.515,.955), -webkit-transform .3s cubic-bezier(.175,.885,.32,1.275), -webkit-filter .3s cubic-bezier(.175,.885,.32,1.275);
-}
-.button:focus {
-    outline: none;
-}
-.button:hover {
-    transform: scale3d(1.1, 1.1, 1);
-    background-position: 100% 50%;
-    outline: none;
-    bottom: 2px;
-}
-.btn-secondary, .button:hover .btn-secondary {
-    background-position: 100% 50%;
-    filter: blur(1.6rem);
-    bottom: -5px;
-}
-/* Ripple */
-span.ripple {
-    position: absolute;
-    border-radius: 50%;
-    transform: scale(0);
-    animation: ripple 600ms linear;
-    background-color: rgba(255, 255, 255, .85);
-}
-/* Ripple Animation */
-@keyframes ripple {
-    to {
-        transform: scale(.65);
-        opacity: 0;
-    }
-}
-/* Cursor */
-.cursor {
-    position: fixed;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: #f5f5f5;
-    pointer-events: none;
-    mix-blend-mode: difference;
-    transition: transform .3s cubic-bezier(.175, .885, .32, 1.175);
-    z-index: 999;
+
+button.learn-more:active::before {
+  cursor: url("cursor_for_links.png");
+  box-shadow: 0 0 0 2px var(--pink-border), 0 0 var(--pink-shadow);
+  transform: translate3d(0, 0, -1em);
 }

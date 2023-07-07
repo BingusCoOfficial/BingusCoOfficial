@@ -1,0 +1,16 @@
+<!DOCTYPE html><html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta name="theme-color" content="#7847b7"><link rel="manifest" href="/manifest.json"><script type="text/javascript">if (location.href.startsWith("https://binguscoofficial.mrhdumpty.repl.co")) {
+        const newUrl = location.href.replace("https://binguscoofficial.mrhdumpty.repl.co", "https://bingusco.xyz");
+        location.href = newUrl;
+      }
+      function disableRightClick(e) {
+        if (!e) var e = window.event;
+        if (e.preventDefault) e.preventDefault(); // For modern browsers
+        else e.returnValue = false; // For IE < 9
+      }
+      if (document.addEventListener) {
+        document.addEventListener('contextmenu', disableRightClick, false);
+      }
+      else {
+        document.attachEvent('oncontextmenu', disableRightClick);
+      }</script><script src="https://code.jquery.com/jquery-3.7.0.min.js"></script><link href="nav.css" rel="stylesheet" type="text/css"><link rel="preload" as="font" href="/LoudBeats.ttf" type="font/ttf" crossorigin="anonymous"></head><body><div class="sidebar"><span id="products"><a href="./products">Products</a></span></div><div class="topbar"><span id="bingusco"><a href="/home"><img title="Say hi to Bingus!" tabindex="1" id="image" src="favicon.png" alt="BingusCO Logo!"><span title="BingusCO!" tabindex="2"><span id="part1">BingusCO</span><span id="part2">©</span></span></a></span><iframe id="embed-1" tabindex="3" src="./home-embed-1"></iframe><iframe id="embed-2" tabindex="4" src="./home-embed-2"></iframe><script>$("#embed-1").on("load",function(){$(this).contents().find(".flexbox").click(function(){window.location.href="about-us"})}),$("#embed-2").on("load",function(){$(this).contents().find(".flexbox").click(function(){window.location.href="help-and-support"})})</script></div><footer id="page-footer">Copyright © 2022-2023 BingusCO</footer>
+</body></html>

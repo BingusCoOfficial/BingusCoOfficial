@@ -15,19 +15,19 @@
         document.attachEvent('oncontextmenu', disableRightClick);
       }
     </script>
-    <script src="https://code.jquery.com/jquery-3.6.2.js" integrity="sha256-pkn2CUZmheSeyssYw3vMp1+xyub4m+e+QK4sQskvuo4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <meta charset="UTF-8">
     <meta name="google" content="notranslate">
     <meta http-equiv="Content-Language" content="en">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <meta name="owner" content="Mr H Dumpty">
-    <meta name="keywords" content="mrhdumpty.xyz, bingus, binguscooffical, bingusco, bingusofficial, mrhdumpty, mr h dumpty, software, OS, computers, computer">
+    <meta name="keywords" content="bingusco.xyz, bingus, binguscooffical, bingusco, bingusofficial, mrhdumpty, mr h dumpty, software, OS, computers, computer">
     <meta name="description" content="The official website of BingusCO!">
-    <link rel="shortcut icon" type="image/gif" href="favicon.gif" />
+    <link rel="shortcut icon" type="image/png" href="favicon.png"/>
     <title>BingusCO Official Website!</title>
     <link href="help-and-support.css" rel="stylesheet" type="text/css" />
-    <link rel="preload" as="font" href="/fonts/LoudBeats.ttf" type="font/ttf" crossorigin="anonymous">
+    <link rel="preload" as="font" href="/LoudBeats.ttf" type="font/ttf" crossorigin="anonymous">
     <script src="help-and-support.js"></script>
   </head>
   <body>

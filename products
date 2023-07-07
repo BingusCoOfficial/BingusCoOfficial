@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <link rel="manifest" href="/manifest.json">
+    <script type="text/javascript">
+      function disableRightClick(e) {
+        if (!e) var e = window.event;
+        if (e.preventDefault) e.preventDefault(); // For modern browsers
+        else e.returnValue = false; // For IE < 9
+      }
+      if (document.addEventListener) {
+        document.addEventListener('contextmenu', disableRightClick, false);
+      }
+      else {
+        document.attachEvent('oncontextmenu', disableRightClick);
+      }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.2.js" integrity="sha256-pkn2CUZmheSeyssYw3vMp1+xyub4m+e+QK4sQskvuo4=" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="google" content="notranslate">
+    <meta http-equiv="Content-Language" content="en">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="owner" content="Mr H Dumpty">
+    <meta name="keywords" content="mrhdumpty.xyz, bingus, binguscooffical, bingusco, bingusofficial, mrhdumpty, mr h dumpty, software, OS, computers, computer">
+    <meta name="description" content="The official website of BingusCO!">
+    <link rel="shortcut icon" type="image/gif" href="favicon.gif" />
+    <title>BingusCO Official Website!</title>
+    <link href="home.css" rel="stylesheet" type="text/css" />
+    <link rel="preload" as="font" href="/fonts/LoudBeats.ttf" type="font/ttf" crossorigin="anonymous">
+  </head>
+  <body>
+    <script>
+      $(function(){
+        $("#nav-placeholder").load("nav.html");
+      });
+    </script> 
+    <div id="nav-placeholder" style="overflow:hidden;"></div>
+    <div style="position: absolute; top: 25vh; left:10vw;" class="products">
+      <img style="vertical-align:middle;" src="https://replit.com/cdn-cgi/image/width=1000,quality=100,format=auto/https://storage.googleapis.com/replit/images/1670779641134_0ca89e1c171ea50fb7153e61510f272d.png"/>
+      <a style="vertical-align: middle; font-size: 20pt; cursor: url("cursor-for-links.png");" href="./product/tools.html">BingusTools</a>
+    </div>
+  </body>
+</html>
