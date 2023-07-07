@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <link rel="manifest" href="/manifest.json">
+    <script type="text/javascript">
+      function disableRightClick(e) {
+        if (!e) var e = window.event;
+        if (e.preventDefault) e.preventDefault(); // For modern browsers
+        else e.returnValue = false; // For IE < 9
+      }
+      if (document.addEventListener) {
+        document.addEventListener('contextmenu', disableRightClick, false);
+      }
+      else {
+        document.attachEvent('oncontextmenu', disableRightClick);
+      }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.2.js" integrity="sha256-pkn2CUZmheSeyssYw3vMp1+xyub4m+e+QK4sQskvuo4=" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="google" content="notranslate">
+    <meta http-equiv="Content-Language" content="en">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="owner" content="Mr H Dumpty">
+    <meta name="keywords" content="mrhdumpty.xyz, bingus, binguscooffical, bingusco, bingusofficial, mrhdumpty, mr h dumpty, software, OS, computers, computer">
+    <meta name="description" content="The official website of BingusCO!">
+    <link rel="shortcut icon" type="image/gif" href="favicon.gif" />
+    <title>BingusCO Official Website!</title>
+    <link href="help-and-support.css" rel="stylesheet" type="text/css" />
+    <link rel="preload" as="font" href="/fonts/LoudBeats.ttf" type="font/ttf" crossorigin="anonymous">
+    <script src="help-and-support.js"></script>
+  </head>
+  <body>
+    <div id="nav-placeholder" style="overflow:hidden;"></div>      
+      <div id="help-and-support">
+        <h1>Help and Support</h1>
+        <div id="emails">
+          Email
+          If you want to ask a question then you can email Bingus at <button><a href="mailto:bingus@bingusco.xyz" target="_blank">bingus@bingusco.xyz</a></button>
+          If you need some help then you can email the support team at <button><a href="mailto:support@bingusco.xyz" target="_blank">support@bingusco.xyz</a></button>
+          And if you have a huge problem then you can email the founders at <button><a href="mailto:founders@bingusco.xyz" target="_blank">founders@bingusco.xyz</a></button>
+        </div>
+      </div>
+    </div>
+    <script>
+      $(function(){
+        $("#nav-placeholder").load("nav.html");
+      });
+    </script> 
+  </body>
+</html>

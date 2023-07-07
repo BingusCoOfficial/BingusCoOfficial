@@ -1,0 +1,30 @@
+{
+  "name": "BingusCO Official App",
+  "short_name": "BingusCO",
+  "start_url": "./home",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "icon-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    }, 
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "About the BingusCO Company",
+      "short_name": "About Us",
+      "description": "Find out more about BingusCO and its products!",
+      "url": "/about-us",
+      "icons": [{ "src": "/icon-32.png", "sizes": "32x32" }]
+    }
+  ],
+  "serviceworker": {
+    "src": "service-worker.js"
+  }
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="manifest" href="/manifest.json">
+  <script type="text/javascript">
+      if (location.href.startsWith("https://binguscoofficial.mrhdumpty.repl.co")) {
+        const newUrl = location.href.replace("https://binguscoofficial.mrhdumpty.repl.co", "http://bingusco.xyz");
+        location.href = newUrl;
+      }
+      function disableRightClick(e) {
+        if (!e) var e = window.event;
+        if (e.preventDefault) e.preventDefault(); // For modern browsers
+        else e.returnValue = false; // For IE < 9
+      }
+      if (document.addEventListener) {
+        document.addEventListener('contextmenu', disableRightClick, false);
+      }
+      else {
+        document.attachEvent('oncontextmenu', disableRightClick);
+      }
+    </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="content-language" content="en" />
+  <link rel="icon" type="image/png" href="favicon.png" alt="The official mascot of BingusCO!"/>
+  <title>BingusCO
+Official Website!</title>
+  <link href="style2.css" rel="stylesheet" type="text/css"/>
+</head>
+<button class="learn-more" onclick="window.top.location = './help-and-support'">Help and Support</button>
+</html>
