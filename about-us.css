@@ -4,7 +4,7 @@ html, body{
 
 @font-face {
   font-family: 'loudbeats';
-  src: url(LoudBeats.ttf) format('truetype');
+  src: local(LoudBeats.woff2) format('woff2');
 }
 
 h1, h3, h2 {

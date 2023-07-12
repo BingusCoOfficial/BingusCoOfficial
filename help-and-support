@@ -16,6 +16,7 @@
       }
     </script>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LcUHAwnAAAAANHozL-0bXvrA7Pi04j6SYcGtb3J"></script>
     <meta charset="UTF-8">
     <meta name="google" content="notranslate">
     <meta http-equiv="Content-Language" content="en">
@@ -27,18 +28,65 @@
     <link rel="shortcut icon" type="image/png" href="favicon.png"/>
     <title>BingusCO Official Website!</title>
     <link href="help-and-support.css" rel="stylesheet" type="text/css" />
-    <link rel="preload" as="font" href="/LoudBeats.ttf" type="font/ttf" crossorigin="anonymous">
+    <link rel="preload" as="font" href="/LoudBeats.woff2" type="font/woff2" crossorigin="anonymous">
     <script src="help-and-support.js"></script>
   </head>
   <body>
     <div id="nav-placeholder" style="overflow:hidden;"></div>      
-      <div id="help-and-support">
-        <h1>Help and Support</h1>
-        <div id="emails">
-          Email
-          If you want to ask a question then you can email Bingus at <button><a href="mailto:bingus@bingusco.xyz" target="_blank">bingus@bingusco.xyz</a></button>
-          If you need some help then you can email the support team at <button><a href="mailto:support@bingusco.xyz" target="_blank">support@bingusco.xyz</a></button>
-          And if you have a huge problem then you can email the founders at <button><a href="mailto:founders@bingusco.xyz" target="_blank">founders@bingusco.xyz</a></button>
+    <div id="notification"></div>
+    <div id="help-and-support">
+      <h1>Help and Support</h1>
+      <div id="content">
+        <div id="email">
+          <h3>Email</h3>
+          <p>If you want to ask a question then you can email Bingus at <button><a href="mailto:bingus@bingusco.xyz" target="_blank">bingus@bingusco.xyz</a></button></p>
+          <p>If you need some help then you can email the support team at <button><a href="mailto:support@bingusco.xyz" target="_blank">support@bingusco.xyz</a></button></p>
+          <p>If you have a huge problem then you can email the founders at <button><a href="mailto:founders@bingusco.xyz" target="_blank">founders@bingusco.xyz</a></button></p>
+        </div>
+        <div id="form">
+          <h3>Automatic Email Form</h3>
+          <span>You can also use this form to contact us without logging into your email.</span>
+          <br>
+          <script>
+            const siteKey = '6LcUHAwnAAAAANHozL-0bXvrA7Pi04j6SYcGtb3J';
+                      document.addEventListener('DOMContentLoaded', function () {
+              document.getElementById('contact-form').addEventListener('submit', function (event) {
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const phone = document.getElementById('phone').value;
+                const message = document.getElementById('message').value;
+                let contact_info = "";
+                if (email == null || email == "") {
+                    contact_info = email;
+                } else {
+                    contact_info = phone;
+                }
+                event.preventDefault();
+                grecaptcha.ready(function () {
+                  grecaptcha.execute(siteKey, { action: 'contact_form' }).then(function (token) {
+                    form = document.getElementById("contact-form");
+                    form.insertAdjacentHTML('beforeend', `<input type="hidden" name="recaptcha_token" value="${token}">`);
+                    form.insertAdjacentHTML('beforeend', `<input type="hidden" name="name" value="${name}">`);
+                    form.insertAdjacentHTML('beforeend', `<input type="hidden" name="contact_info" value="${contact_info}">`);
+                    form.insertAdjacentHTML('beforeend', `<input type="hidden" name="message" value="${message}">`);
+                    document.getElementById('contact-form').submit();
+                  });
+                });
+              });
+            });
+          </script>  
+          <form id="contact-form" action="https://mrhdumpty-external.mrhdumpty.repl.co/captcha" method="POST">
+            <span>Enter your name:</span>
+            <input type="text" id="name" placeholder="Name (So that we can identify you)" autocomplete="name">
+            <span>Choose a contact method (only fill in one):</span>
+            <input type="text" id="email" placeholder="Email (So that we can contact you back)" autocomplete="email">
+            <span>Or</span>
+            <input type="text" id="phone" placeholder="Phone (So that we can contact you back)" autocomplete="tel">
+            <span>Type your message:</span>
+            <input type="text" id="message" placeholder="Message (What do you want to say?)" autocomplete="off">
+            <div id="captcha"></div>
+            <input type="submit"></button>
+          </form>
         </div>
       </div>
     </div>

@@ -27,7 +27,7 @@
     <link rel="shortcut icon" type="image/gif" href="favicon.gif" />
     <title>BingusCO Official Website!</title>
     <link href="home.css" rel="stylesheet" type="text/css" />
-    <link rel="preload" as="font" href="/fonts/LoudBeats.ttf" type="font/ttf" crossorigin="anonymous">
+    <link rel="preload" as="font" href="/fonts/LoudBeats.woff2" type="font/woff2" crossorigin="anonymous">
   </head>
   <body>
     <script>

@@ -4,7 +4,7 @@ html, body {
 
 @font-face {
   font-family: loudbeats;
-  src: url("LoudBeats.ttf") format('truetype');
+  src: url("LoudBeats.woff2") format('woff2');
   font-display: swap;
 }
 
@@ -20,7 +20,7 @@ html, body {
   position: relative;
   width: auto;
   overflow: hidden;
-  font-family: loudbeats, "Comic Sans MS", cursive;
+  font-family: loudbeats, 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', sans-serif;
   font-size: 30pt;
   z-index: 999999999;
   transform: translate(40vw, 25vh);

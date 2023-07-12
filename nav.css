@@ -11,7 +11,7 @@ html, body {
 
 @font-face {
   font-family: 'loudbeats';
-  src: url("LoudBeats.ttf") format('truetype');
+  src: url("LoudBeats.woff2") format('woff2');
   font-display: swap;
 }
 
@@ -63,7 +63,7 @@ html, body {
   left: 17.5%;
   position: relative;
   z-index: 875974;
-  font-family: "loudbeats", "Comic Sans MS";
+  font-family: "loudbeats", 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', sans-serif;
   font-size: 100px;
   margin: 0 auto;
 }
@@ -123,7 +123,7 @@ span a {
   position: absolute;
   left: 0;
   top: 50vh;
-  font-family: "loudbeats", "Comic Sans MS";
+  font-family: "loudbeats", 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', sans-serif;
 }
 
 #page-footer {
